@@ -22,3 +22,10 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+
+bin/
+pkg/
+src/evilboy/demo/demo
+src/evilboy/spider/jd/jd
+src/evilboy/spider/taobao/taobao

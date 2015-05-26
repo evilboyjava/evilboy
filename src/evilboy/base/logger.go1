@@ -1,0 +1,18 @@
+package base
+
+import (
+	"fmt"
+	"log"
+)
+
+// 创建日志记录器。
+func NewLogger() log.Logger {
+
+	logfile, err := os.OpenFile("golang_log.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0)
+	if err != nil {
+		fmt.Println("%s\r\n", err.Error())
+		os.Exit(-1)
+	}
+
+	return log.New(logfile, "\n", log.Ldate|log.Ltime|log.Llongfile)
+}
